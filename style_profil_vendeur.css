@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body
+{
+    background-color: #A9A9A9; 
+}
+
+.container-fluid{
+    padding : 0px; 
+}
+
+.block{
+    margin-top: 5px; 
+    padding-top: 5%;
+    border: 1px solid GREY; 
+    padding-bottom : 5%;
+
+}
+
+.centre_profil{
+    padding-top: 3%; 
+    float : none; 
+    padding-top: 5%;
+    margin: auto; 
+    border: 2px solid GREY;
+    background-color: #FAFAFA;
+    text-align: center; 
+    padding-bottom : 5%;
+}
+
