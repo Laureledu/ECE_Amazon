@@ -80,56 +80,32 @@
 						      </tr>
 						    </thead>
 						    <tbody id="myTable">
-						      <tr>
-						        <td>John</td>
-						        <td>john@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>Mary</td>
-						        <td>mary@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>Emy</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
+
+						    	<?php 
+
+						            $database = "ece_amazon";
+						            $conn = mysqli_connect('localhost', 'root', '', $database );
+						          	$sql ="SELECT * FROM vendeur";
+						          	$result = mysqli_query($conn, $sql);
+						        
+						            while($colonne = mysqli_fetch_assoc($result)){
+
+
+						            	$_SESSION['num_colonne'] = $colonne;
+
+						            echo '
+
+
+
+								      <tr>
+								        <td>'.$colonne['Pseudo_vend'].'</td>
+								        <td>'.$colonne['Email_vend'].'</td>
+
+								        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+
+								      </tr>';}
+						        ?>
+
 						    </tbody>
 						</table>
 					</div></br>
