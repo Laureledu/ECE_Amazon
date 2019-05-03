@@ -1,7 +1,8 @@
 <?php
     session_start(); // on récupère la session qui existe déjà 
     
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -110,8 +111,8 @@
         <div class = "row">
         <br>
             <div class = "col-md-10 centre_profil">
-                <center><h1>Personnaliser son profil</h1></center><br><br>
-                <p>Tu peux, dorénavant, personnaliser le fond d'écran de ton profil ECE_Amazon avec une image pré-enregisté sur ton ordinateur.</p><br><br><br>
+                <center><h1>Personnaliser son profil</h1><br><br>
+                <p>Tu peux, dorénavant, personnaliser le fond d'écran de ton profil ECE_Amazon avec une image pré-enregisté sur ton ordinateur.</p></center><br><br><br>
                 <form method="POST" action="choisir_son_fond_prefere.php" enctype="multipart/form-data">
                     <center>
                         <input type="file" name="avatar">
@@ -124,69 +125,34 @@
     
         <div class="row" >
             <div class="col-md-10 centre_profil">
+                <center><h1>Mon Profil</h1><br><br>
                 <?php
-                echo $_SESSION['pseudo_du_vendeur']; echo '<br>'; echo '<br>';
-                echo $_SESSION['email_du_vendeur']; 
+                echo "Mon pseudo : ".$_SESSION['pseudo_du_vendeur']."<br/><br/>";
+                echo "Email : ".$_SESSION['email_du_vendeur']; 
                 ?>           
-            </div>
+            </div></center>
             
         </div> 
-        <br>
+        
 
         <!-- gestion des articles associés aux vendeurs --> 
         <div class = "row">
-            <div class = "class="col-md-10 gestion_item>
-                <?php
-                    /*$database = "ece_amazon"; 
-                    $connect = mysqli_connect('localhost','root',''); 
-                    $db_found = mysqli_select_db($connect,$database); 
+        
+            <div class = "col-md-10 bouton_gestion_item">
+                <form method="POST" action="profil_vendeur_item.php">
                     
-                    if($db_found)
-                    {
-                        $sql = "SELECT * FROM item INNER JOIN vendeur ON item.Id_vendeur=vendeur.Id_vendeur" ; 
-                        //$sql = "SELECT * FROM item WHERE Id_vendeur == $_SESSION['id_vendeur'] , ALL IS NOT NULL"; 
-                        $result = mysqli_query($connect, $sql); 
-                        if ($row = mysqli_fetch_assoc($result)){
-
-                            $_SESSION['id_item'] = $row['Id_item'];
-                            $_SESSION['nom_item'] = $row['Nom_item'];
-                            $_SESSION['prix_unite'] = $row['Prix_unite'];
-                            $_SESSION['quantite_item'] = $row['Quantite_item'];
-                            $_SESSION['quantite_vendu'] = $row['Quantite_vendu'];
-                            $_SESSION['categrorie'] = $row['Categorie']; 
-                            $_SESSION['auteur'] = $row['Auteur']; 
-                            $_SESSION['genre'] = $row['Genre']; 
-                            $_SESSION['collection'] = $row['Collection']; 
-                            $_SESSION['type_vetement'] = $row['Type_vetement']; 
-                            $_SESSION['taille'] = $row['Taille']; 
-                            $_SESSION['couleur'] = $row['Couleur']; 
-                            $_SESSION['photo_article'] = $row['Photo_article'];
-                           
-                        }
-                }*/
-
-                try{
-                    $database = new PDO ('mysql:host=localhost;dbname=ece_amazon;charset=utf8', 'root', ''); // on se connect à la bdd
-                }
-                catch (Exception $e) // en cas d'erreur 
-                {
-                    die ('Erreur : '.$e->getMessage()); 
-                }
-                $reponse = $database->query('SELECT * FROM item INNER JOIN vendeur ON item.Id_vendeur=vendeur.Id_vendeur'); // requète
-                echo 'salut'; 
-                while($row = $reponse->fetch())
-                {
-                    echo "Identifiant : ".$_SESSION['id_item'] = $row['Id_item']."";<br> ;  
+                        <button  type="submit" class="btn btn-info" name="submit">Gestion des items</button>
                     
-                            
+                </form>
 
-                }
-
-
-
-                ?>
             </div>
-        </div>
+        </div>  
+                
+                
+                    
+                
+               
+        
        
     <!-- fin du profil -->
 

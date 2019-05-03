@@ -35,16 +35,22 @@ body
     text-align: center; 
 }
 
-
-
 .centre_profil{
-    padding-top: 3%; 
-    float : none; 
     padding-top: 5%;
+    float : none; 
     margin: auto; 
     border: 2px solid GREY;
     background-color: #FAFAFA;
-    text-align: center; 
+    padding-bottom : 5%;
+}
+
+.bouton_gestion_item{
+    padding-top: 5%;
+    float : none; 
+    margin: auto; 
+    border: 2px solid GREY;
+    background-color: #FAFAFA;
+    text-align : center; 
     padding-bottom : 5%;
 }
 
