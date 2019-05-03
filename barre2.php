@@ -1,5 +1,5 @@
 <!-- A horizontal navbar that becomes vertical on small screens -->
-      <nav class="navbar navbar-expand-sm bg-dark">
+      <nav class="navbar navbar-expand-sm menu navbar-dark bg-dark">
         <?php
 
           //Acheteur connecté
@@ -24,10 +24,10 @@
                        Categories
                        </a>
                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Livres</a>
-                          <a class="dropdown-item" href="#">Musiques</a>
-                          <a class="dropdown-item" href="#">Vetements</a>
-                          <a class="dropdown-item" href="#">Sports et Loisirs</a>
+                          <a class="dropdown-item" href="Livres.php" styles ="color:black">Livres</a>
+                          <a class="dropdown-item" href="Musiques.php">Musiques</a>
+                          <a class="dropdown-item" href="Vetements.php">Vetements</a>
+                          <a class="dropdown-item" href="Sports_Loisirs.php">Sports et Loisirs</a>
                        </div>
                     </li>
 
@@ -139,10 +139,10 @@
                                  Categories
                                  </a>
                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Livres</a>
-                                    <a class="dropdown-item" href="#">Musiques</a>
-                                    <a class="dropdown-item" href="#">Vetements</a>
-                                    <a class="dropdown-item" href="#">Sports et Loisirs</a>
+                                      <a class="dropdown-item" href="Livres.php" styles ="color:black">Livres</a>
+                                      <a class="dropdown-item" href="Musiques.php">Musiques</a>
+                                      <a class="dropdown-item" href="Vetements.php">Vetements</a>
+                                      <a class="dropdown-item" href="Sports_Loisirs.php">Sports et Loisirs</a>
                                  </div>
                               </li>
 

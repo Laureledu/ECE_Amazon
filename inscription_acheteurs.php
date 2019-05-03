@@ -67,7 +67,7 @@
 						    </div>
 						    <div class="form-group col-md-5">
 						      <label >Tel.</label>
-						      <input type="number" class="form-control" name="tel" pattern="[0-9]{10}" placeholder="Format : 06XXXXXXXX" required>
+						      <input type="text" class="form-control" name="tel" pattern="[0-9]{10}" placeholder="Format : 06XXXXXXXX" required>
 						    </div>
 						 </div>
 
@@ -134,7 +134,7 @@
 
 						  <div class="form-group">
 						  	<label >Numero de carte</label>
-						     <input type="number" class="form-control" name ="num_carte" placeholder="Ex : XXXXXXXXXXXXXXXX" required>
+						     <input type="text" class="form-control" name ="num_carte" pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}" placeholder="Ex : XXXXXXXXXXXXXXXX" required>
 						  </div>
 
 

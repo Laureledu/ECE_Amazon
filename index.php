@@ -62,7 +62,17 @@
 
 							if(isset($_SESSION['id_acheteur']))
 							{
-								echo  '<h1>'. $_SESSION['nom_ach']." a pour prénom ".$_SESSION['prenom_ach'].'</h1>';	
+								echo  '<h1> Bonjour'.$_SESSION['pseudo_ach'].'</h1>';	
+
+							}
+							elseif(isset($_SESSION['id_vendeur']))
+							{
+								echo  '<h1> Bonjour'.$_SESSION['pseudo_du_vendeur'].'</h1>';	
+
+							}
+							elseif(isset($_SESSION['id_admin']))
+							{
+								echo  '<h1> Bonjour'.$_SESSION['pseudo_admin'].'</h1>';	
 
 							}else {
 
