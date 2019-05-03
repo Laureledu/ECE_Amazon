@@ -53,10 +53,10 @@
 					    <p class="h4 mb-4">Connexion Admin</p>
 
 					    <!-- Email -->
-					    <input type="text"  name="admin_co" class="form-control mb-4" placeholder="E-mail/Nom d'utilisateur">
+					    <input type="text"  name="admin_co" class="form-control mb-4" placeholder="E-mail/Nom d'utilisateur" required>
 
 					    <!-- Password -->
-					    <input type="password"  name="Mdp" class="form-control mb-4" placeholder="Mot de passe">
+					    <input type="password"  name="Mdp" class="form-control mb-4" placeholder="Mot de passe" required>
 
 
 

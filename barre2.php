@@ -16,7 +16,7 @@
                        <a class="nav-link" href="#">Vendre</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="#">Vente flash</a> 
+                       <a class="nav-link" href="VenteFlash.php">Vente flash</a> 
                     </li>
 
                     <li class="nav-item dropdown">
@@ -52,12 +52,9 @@
 
                            <li class="nav-item">
                               <a class="nav-link" href="#">Panier</a>
-                           </li>';
-                       } 
-
-                       //Vendeur connecté
-
-                       elseif(isset($_SESSION['id_vendeur'])){
+                           </li>
+                           </ul>';
+                       }elseif(isset($_SESSION['id_vendeur'])){
                      //Left
                       echo '<ul class="navbar-nav mr-auto">
 
@@ -86,20 +83,15 @@
                                     <button  type="submit" name = "deconnexion" class="deco btn-danger btn-sm"> Déconnexion </button>
                                  </form>
                                </div>
-                            </li>';
-                          }
-
-                      //Vendeur connecté
-
-                      elseif(isset($_SESSION['id_admin'])){
+                            </li>
+                            </ul>';
+                          }elseif(isset($_SESSION['id_admin'])){
                      //Left
                       echo '<ul class="navbar-nav mr-auto">
 
                           <li class="nav-item">
                              <a class="nav-link navbar-brand" href="index.php">Ece Amazon</a>
-                          </li>
-
-       
+                          </li>       
                         </ul>
 
                           <!-- Right -->
@@ -110,12 +102,15 @@
                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                                 '.$_SESSION['pseudo_admin'].'
                                </a>
-                               <div class="dropdown-menu">
+
+                              <div class="dropdown-menu">
+                                <a  href="admin.php" name = "retour" class="deco btn btn-sm" role="button"> Votre profil </a>
                                   <form role="form" action="traitement_deco_acheteur.php" method="post" >
                                     <button  type="submit" name = "deconnexion" class="deco btn-danger btn-sm"> Déconnexion </button>
-                                 </form>
-                               </div>
-                            </li>';
+                                  </form>
+                              </div>
+                            </li>
+                          </ul>';
                           }
 
                          else{
@@ -131,7 +126,7 @@
                                  <a class="nav-link" href="#">Vendre</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#">Vente flash</a> 
+                                 <a class="nav-link" href="VenteFlash.php">Vente flash</a> 
                               </li>
 
                               <li class="nav-item dropdown">
@@ -159,7 +154,8 @@
                                 </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="connexion_admin.php">admin</a>
-                               </li>';
+                               </li>
+                               </ul>';
 
                        }
 

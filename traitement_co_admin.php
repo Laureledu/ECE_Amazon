@@ -49,7 +49,7 @@ $database = "ece_amazon";
 								session_start();
 
 
-								$_SESSION['id_admin'] = $row['Id'];
+								$_SESSION['id_admin'] = $row['ID'];
 								$_SESSION['pseudo_admin'] = $row['Pseudo'];
 								$_SESSION['email_admin'] = $row['Email'];
 								header("Location: admin.php?login=success");
@@ -60,10 +60,6 @@ $database = "ece_amazon";
 
 			}
 		
-		}elseif (isset($_POST['creer']))
-		{
-			header("Location: inscription_acheteurs.php");
-			exit();
 		}
 	mysql_close($conn);
 
