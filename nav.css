@@ -2,25 +2,20 @@
 /* Design du header*/
 .menu
 {
-	background-color: brown;
-	height: 60px;
+
+	height: 65px;
 	/* pour centrer le contenu du header et faire en sorte qu'il ne dépasse pas la hauteur*/
-	line-height: 60px;
-	border-bottom:none;
-	margin-bottom: 0px;
+	line-height: 65px;
+
 }
 
-.droite li
-{
+.menu ul li{
 
-	padding-right: 15px;
+	color: rgba(230,230,230,0.9);
+	padding: 0px 5px;
+
 }
 
-.droite li a
-{
-
-	text-
-}
 
 
 
