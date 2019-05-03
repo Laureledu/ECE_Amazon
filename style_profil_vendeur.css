@@ -9,13 +9,33 @@ body
     padding : 0px; 
 }
 
-.block{
-    margin-top: 5px; 
-    padding-top: 5%;
-    border: 1px solid GREY; 
-    padding-bottom : 5%;
-
+.coucou{
+    padding-top: 0%; 
+    width: 100%;
+    max-width: 100%;
 }
+
+.image_fond{
+
+    width:100%;
+    max-width:100%;
+}
+
+.image_fond img {
+
+    width:100%;
+    max-width:100%;
+}
+
+.photo_profil{
+
+    position: absolute; 
+    top: 40%;
+    width:100%;
+    text-align: center; 
+}
+
+
 
 .centre_profil{
     padding-top: 3%; 

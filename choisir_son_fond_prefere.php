@@ -1,17 +1,57 @@
 <?php
     session_start(); 
+    $database = new PDO ('mysql:host=localhost;dbname=ece_amazon', 'root', '');  
 // ici on veut que l'utilisateur puisse choisir son fond préféré 
-    /*if (isset($_FILES['submit']) AND !empty($_FILES['submit']['name']))
-    {
-        $extentionValide=array('jpg'); 
-        $extentionUpload = strtolower(substr(strrchr($_FILES['submit']['name'], '.'),1)); 
-        if(in_array($extentionUpload, $extentionValide))
+
+//--------------------- LIEN UTILISE : https://www.youtube.com/watch?v=lDZLZAdr1is ---------------------//
+//// -------------- autre lien : https://www.youtube.com/watch?v=JaRq73y5MJk&t=201s&fbclid=IwAR30OKpUcrUAL20KvSkN833RXSEQ_zU8qUtvjvEhrg1CeTtAH26VjqZOgAE ------ //
+
+    if (isset($_POST['submit'])){
+
+
+        if (isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
         {
-            $chemin = "fond_profil_vendeur/".$_SESSION['id_vendeur'].".".$extentionUpload; 
-        }
-    }*/
+            $taille_dossier = 2000000; 
+            $extentionValide=array('jpg', 'gif', 'png', 'jpeg'); 
+            if ($_FILES['avatar']['size'] <= $taille_dossier)
+            {
+                $extentionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'),1));
+                if(in_array($extentionUpload, $extentionValide))
+               {
+                    $chemin = "fond_profil_vendeur/".$_SESSION['id_vendeur'].".".$extentionUpload; 
+                    $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
+                    if($resultat)
+                    {
+                        $update_table_vendeur = $database->prepare('UPDATE vendeur SET Fond_vendeur = :avatar WHERE Id_vendeur = :id_vendeur'); 
+                                $update_table_vendeur->execute(array(
+                                    'avatar' => $_SESSION['id_vendeur'].".".$dossier_actuel_Ext,
+                                    'id_vendeur'=> $_SESSION['id_vendeur']
+                                ));
+                                
+                                header("Location: profil_vendeur.php?login=success");
+                                exit();
     
-    if (isset($_POST['submit']))
+                    }
+               }
+           }
+            else{
+                $msg = "probleme de taille "; 
+            }   
+        }
+        else{
+            header("Location: profil_vendeur.php?login=error");
+            exit();
+
+        }
+        
+    }
+    /*$database = "ece_amazon";
+	//connectez-vous dans votre BDD
+	//Rappel : votre serveur = localhost | votre login = root | votre mot de pass = '' (rien)
+    $conn = mysqli_connect('localhost', 'root', '', $database );*/
+    
+      
+    /*if (isset($_POST['submit']))
     {
         $dossier = $_FILES['avatar']; 
 
@@ -32,18 +72,21 @@
             {
                 if ($taille_dossier < 1000000)
                 {
-                    $nv_nom_dossier = uniqid('',true).".".$dossier_actuel_Ext;
-                    $destination_dossier = 'fond_profil_vendeur/'.$_SESSION['id_vendeur'].$nv_nom_dossier; 
+                    //$chemin = "fond_profil_vendeur/".$_SESSION['id_vendeur'].".".$extentionUpload; 
+                    $nv_nom_dossier = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
+                    //$nv_nom_dossier = uniqid('',true).".".$dossier_actuel_Ext;
+                    $destination_dossier = 'fond_profil_vendeur/'.$_SESSION['id_vendeur'].".".$nv_nom_dossier; 
                     $resultat = move_uploaded_file($repertoire_temporaire, $destination_dossier);  // on va chercher le fichier ici 
                     echo "yo"; 
                     if($resultat) // maintenant on veut envoyer l'information vers la base de donnée 
                     {
                         echo "salut"; 
-                        $updat_table_vendeur = $database->prepare('UPDATE vendeur SET Fond_vend = :dossier WHERE Id_vendeur = :id_vendeur'); 
-                        $updat_table_vendeur->execute(array(
-                            'dossier' => $_SESSION['id_vendeur'].".".$dossier_actuel_Ext,
-                            'id_vendeur'=> $_SESSION['id_vendeur'].".".$dossier_actuel_Ext
+                        $update_table_vendeur = $database->prepare('UPDATE vendeur SET Fond_vendeur = :avatar WHERE Id_vendeur = :id_vendeur'); 
+                        $update_table_vendeur->execute(array(
+                            'avatar' => $_SESSION['id_vendeur'].".".$dossier_actuel_Ext,
+                            'id_vendeur'=> $_SESSION['id_vendeur']
                         ));
+                        sleep(3); 
                         header("Location: profil_vendeur.php?login=success");
                         exit();
                     }else
@@ -67,7 +110,9 @@
             echo "Tu n as pas pris un fichier avec le bon type"; 
         }
 
-    }
+    }*/
+
+
 
 
 

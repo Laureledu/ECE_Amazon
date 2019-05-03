@@ -50,6 +50,7 @@ $database = "ece_amazon";
 							
 							$_SESSION['id_vendeur'] = $row['Id_vendeur'];
 							$_SESSION['photo_profil_vendeur'] = $row['Photo_prof_vend'];
+							$_SESSION['photo_fond'] = $row['Fond_vendeur'];
 							$_SESSION['pseudo_du_vendeur'] = $row['Pseudo_vend'];
 							$_SESSION['email_du_vendeur'] = $row['Email_vend'];
 
