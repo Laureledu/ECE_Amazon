@@ -47,151 +47,236 @@
 <hr class="separateur">
 
 <h3 id="description">Livres</h3>
-<div id="Carousel1" class="carousel slide" data-ride="carousel">
+<div class="col-sm">
+  <div id="Carousel1" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
-    <li data-target="#Carousel1" data-slide-to="1"></li>
-    <li data-target="#Carousel1" data-slide-to="2"></li>
-    <li data-target="#Carousel1" data-slide-to="3"></li>
-  </ul>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
+      <li data-target="#Carousel1" data-slide-to="1"></li>
+      <li data-target="#Carousel1" data-slide-to="2"></li>
+      <li data-target="#Carousel1" data-slide-to="3"></li>
+    </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/test1.jpg">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+       <div class="row">
+          <div class="col-sm-3">
+            <img src="images/livre1.jpg">
+          </div>
+          <div class="col-sm-9" id="test">
+            <h4>Notre Dame</h4>
+            <p>Il était là, grave, immobile, absorbé dans un regard et dans une pensée. Tout Paris était sous ses pieds, avec les mille flèches de ses édifices et son circulaire horizon de molles collines, avec son fleuve qui serpente sous ses ponts et son peuple qui ondule dans ses rues, avec le nuage de ses fumées, avec la chaîne montueuse de ses toits qui presse Notre-Dame de ses mailles redoublées.</p>
+            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="images/livre2.jpg">
+          </div>
+
+          <div class="col-sm-9" id="test">
+            <h4>Zola</h4>
+            <p>1885. Disparition de Hugo. Apparition de Germinal. Voici, dans la France moderne et industrielle, les " Misérables " de Zola. Ce roman des mineurs, c'est aussi l'Enfer, dans un monde dantesque, où l'on " voyage au bout de la nuit "</p>
+            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="images/livre3.jpg">
+          </div>
+
+          <div class="col-sm-9" id="test">
+            <h4>Zola</h4>
+            <p>Valentin, vingt-cinq ans, mène une vie de dandy vouée aux plaisirs et jure qu'il ne se mariera jamais, de peur d'être trompé. Quand son oncle, las de l'entretenir, lui propose de s'unir à Cécile de Mantes, une riche aristocrate, Valentin parie qu'il séduira incognito sa promise...</p>
+            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="images/livre4.jpg">
+          </div>
+
+          <div class="col-sm-9" id="test">
+            <h4>Prevert</h4>
+            <p>Le cancreil dit non avec la tête mais il dit oui avec le cœuril dit oui à ce qu'il aimeil dit non au professeuril est debouton le questionneet tous les problèmes sont poséssoudain le fou rire le prendet il efface toutles chiffres et les motsles dates et les nomsles phrases et les piègeset malgré les menaces du maîtresous les huées des enfants prodigesavec des craies de toutes les couleurssur le tableau noir du malheuril dessine le visage du bonheur.</p>
+            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+          </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="images/test2.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test3.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test4.jpg">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#Carousel1" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel1" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
   </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#Carousel1" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#Carousel1" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
 </div>
 
 <h3 id="description">Musique</h3>
-<div id="Carousel2" class="carousel slide" data-ride="carousel">
+<div class="col-sm">
+  <div id="Carousel2" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
-    <li data-target="#Carousel2" data-slide-to="1"></li>
-    <li data-target="#Carousel2" data-slide-to="2"></li>
-    <li data-target="#Carousel2" data-slide-to="3"></li>
-  </ul>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
+      <li data-target="#Carousel2" data-slide-to="1"></li>
+      <li data-target="#Carousel2" data-slide-to="2"></li>
+      <li data-target="#Carousel2" data-slide-to="3"></li>
+    </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/test1.jpg">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/test1.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test2.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test3.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test4.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="images/test2.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test3.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test4.jpg">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#Carousel2" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel2" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
   </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#Carousel2" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#Carousel2" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
 </div>
 
 <h3 id="description">Vetements</h3>
-<div id="Carousel3" class="carousel slide" data-ride="carousel">
+<div class="col-sm">
+  <div id="Carousel3" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
-    <li data-target="#Carousel3" data-slide-to="1"></li>
-    <li data-target="#Carousel3" data-slide-to="2"></li>
-    <li data-target="#Carousel3" data-slide-to="3"></li>
-  </ul>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
+      <li data-target="#Carousel3" data-slide-to="1"></li>
+      <li data-target="#Carousel3" data-slide-to="2"></li>
+      <li data-target="#Carousel3" data-slide-to="3"></li>
+    </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/test1.jpg">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/test1.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test2.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test3.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test4.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="images/test2.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test3.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test4.jpg">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#Carousel3" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel3" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
   </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#Carousel3" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#Carousel3" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
 </div>
 
 <h3 id="description">Sport</h3>
-<div id="Carousel4" class="carousel slide" data-ride="carousel">
+<div class="col-sm">
+  <div id="Carousel4" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#Carousel4" data-slide-to="0" class="active"></li>
-    <li data-target="#Carousel4" data-slide-to="1"></li>
-    <li data-target="#Carousel4" data-slide-to="2"></li>
-    <li data-target="#Carousel4" data-slide-to="3"></li>
-  </ul>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#Carousel4" data-slide-to="0" class="active"></li>
+      <li data-target="#Carousel4" data-slide-to="1"></li>
+      <li data-target="#Carousel4" data-slide-to="2"></li>
+      <li data-target="#Carousel4" data-slide-to="3"></li>
+    </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/test1.jpg">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/test1.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test2.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test3.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/test4.jpg">
+        <div class="carousel-caption">
+          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="images/test2.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test3.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test4.jpg">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#Carousel4" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel4" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
   </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#Carousel4" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#Carousel4" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
 </div>
 
   <!-- Debut footer / contact -->

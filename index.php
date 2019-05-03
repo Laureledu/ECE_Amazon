@@ -77,7 +77,7 @@
 
 				?>
 				 
-			</div>
+			</article>
 		</div>
 	</section>
 	<!-- fin banière -->

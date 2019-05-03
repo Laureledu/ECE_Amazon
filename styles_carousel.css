@@ -1,13 +1,14 @@
 .carousel-inner img {
-      width: 100%; /* Set width to 100% */
+      width: 50%; /* Set width to 100% */
       margin: auto;
       max-height:200px;
   }
+#test{
+	color: white;
+	background-color:white;
+background-image:url(images/test3.jpg);
+}
 
-.col
-  {
-    border: 1px black solid;
-  }
 
 /* Hide the carousel text when the screen is less than 600 pixels wide */
   @media (max-width: 600px) {
