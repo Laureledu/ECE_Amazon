@@ -44,9 +44,9 @@
 						//filter_var(chaine de caractères, FILTER_VALIDATE_EMAIL): filter_var peut filtrer n'importe quelle chaine de caractères avec un filtre existant (second paramètre). Ici FILTER_VALIDATE_EMAIL est un des filtres dispo dans la docu de php qui permet de verifier si le string est bien un email. 
 						header("Location: inscription_acheteurs.php?création=email_invalide");
 						exit();
-				}
-			
-				else{
+
+				}else{
+
 
 						$sql ="SELECT * FROM acheteur WHERE Pseudo_ach ='$pseudo' OR Email_ach = '$email'";
 						$result = mysqli_query($conn, $sql);

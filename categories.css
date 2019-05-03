@@ -1,0 +1,198 @@
+/* https://bootsnipp.com/snippets/eoxe6*/
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+.box{
+
+    /* pour éviter que le wrapp ne compresse trop les boites d'item lorsque'il y a peu d'items on impose une largeur minimal*/
+    min-width: 260px;
+    max-width: 260px;
+    margin-bottom: 5%;
+}
+
+.titre_page h2{
+
+    margin-top: 4%;
+    text-align: center;
+    font-weight: bold
+    
+}
+
+/*.menu_vertical {
+
+    position:fixed;
+    width:200px;
+    height: 100%;
+    background:#151719;
+    
+}*/
+
+.separateur
+{ 
+    height : 2px;
+    margin-bottom: 4%;
+    width: 40%;
+    border: none;
+    box-shadow: none;
+    background-color: #E8392E;
+}
+
+
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 10px;
+    background: #FFF;
+    
+    padding: 9px 2px;
+	margin:5px 0;
+    
+}
+
+/* Bootsnipp.com : lorsque l'on passe sur l'item la boite est mise en avant (hover)*/
+.col-item:hover
+{ 
+ 
+  box-shadow: 0px 2px 5px -1px #000;
+  -moz-box-shadow: 0px 2px 5px -1px #000;
+  -webkit-box-shadow: 0px 2px 5px -1px #000;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 10px;   
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;   
+  border-bottom:2px solid #52A1D5;        
+}
+
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
+}
+
+.col-item .price
+{
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
+}
+
+.col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
+}
+
+.price-text-color
+{
+    color: #219FD1;
+}
+
+
+.col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+.clear-left
+{
+    clear: left;
+}
+
+.col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-item .separator p i
+{
+    margin-right: 5px;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+
+.col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+    
+}
+
+.col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.controls
+{
+    margin-top: 20px;
+}
+
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}
+
+
+/*
+Hover the image
+*/
+.image_item
+{
+    height: 160px;
+    position: relative;
+}
+
+.center img { 
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: -webkit-calc(50% - 20%); 
+    left: -webkit-calc(50% - 20%);
+    top: -moz-calc(50% - 20%); left: -moz-calc(50% - 20%);
+    top: calc(00% - 20%); left: calc(50% - 20%); }
+
+
+.absolute-aligned {
+     position: relative; 
+     min-height: 150px;
+
+}
+
+.absolute-aligned img {
+    width: 50%;
+    min-width: 200px;
+    height: auto;
+    overflow: auto; 
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+}
+
+.image_item img
+{
+    position: absolute;
+    padding: 1px;
+
+    height: 150px; 
+    margin: 0 auto;
+    border-radius: 0px 0px 0 0 ;
+}
+
+/* Titre article taille*/
+
+.titre_article {
+    min-height: 50px;
+}

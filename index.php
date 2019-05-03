@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="styles_index.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 		<link rel="stylesheet" type="text/css" href="styles_carousel.css">
+
 	<!-- fin CSS -->
 
 	<!-- Debut Jquery -->
@@ -45,6 +46,7 @@
 	?>
 
 	<!-- Debut banière -->
+
 	<div class = "container-fluid banner">
 
 		<div class="row">
@@ -63,7 +65,19 @@
 
 							if(isset($_SESSION['id_acheteur']))
 							{
-								echo  '<h1>'. $_SESSION['nom_ach']." a pour prénom ".$_SESSION['prenom_ach'].'</h1>';	
+
+								echo  '<h1> Bonjour'.$_SESSION['pseudo_ach'].'</h1>';	
+
+							}
+							elseif(isset($_SESSION['id_vendeur']))
+							{
+								echo  '<h1> Bonjour'.$_SESSION['pseudo_du_vendeur'].'</h1>';	
+
+							}
+							elseif(isset($_SESSION['id_admin']))
+							{
+								echo  '<h1> Bonjour'.$_SESSION['pseudo_admin'].'</h1>';	
+
 
 							}else {
 
@@ -81,6 +95,7 @@
 		</div>
 	</section>
 	<!-- fin banière -->
+
 
 	<div class="col">
 		<h2 id="description">Les meilleures ventes toutes catégories</h2>
@@ -122,6 +137,7 @@
   </a>
 
 </div>
+
 
 
 	<!-- Debut à propos -->
