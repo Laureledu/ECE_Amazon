@@ -43,7 +43,10 @@
 
   ?>
 
-<h3>Livres</h3>
+<h2 id="description"> Ventes Flash</h2>
+<hr class="separateur">
+
+<h3 id="description">Livres</h3>
 <div id="Carousel1" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -80,7 +83,7 @@
 
 </div>
 
-<h3>Musique</h3>
+<h3 id="description">Musique</h3>
 <div id="Carousel2" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -117,7 +120,7 @@
 
 </div>
 
-<h3>Vetements</h3>
+<h3 id="description">Vetements</h3>
 <div id="Carousel3" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -154,7 +157,7 @@
 
 </div>
 
-<h3>Sport</h3>
+<h3 id="description">Sport</h3>
 <div id="Carousel4" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->

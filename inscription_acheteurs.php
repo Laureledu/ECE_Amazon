@@ -8,7 +8,7 @@
 	<!-- Debut CSS -->
 	
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="styles_co_deco_acheteurs.css">
+	<link rel="stylesheet" type="text/css" href="styles_formulaire.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="styles_index.css">
 	<!-- fin CSS -->

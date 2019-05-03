@@ -45,7 +45,7 @@
 	?>
 
 	<!-- Debut banière -->
-	<section class = "container-fluid banner">
+	<div class = "container-fluid banner">
 
 		<div class="row">
 		
@@ -77,10 +77,15 @@
 
 				?>
 				 
-			</article>
+			</div>
 		</div>
 	</section>
 	<!-- fin banière -->
+
+	<div class="col">
+		<h2 id="description">Les meilleures ventes toutes catégories</h2>
+		<hr class="separateur">
+	</div>
 
 	<div id="Carousel1" class="carousel slide" data-ride="carousel">
 
