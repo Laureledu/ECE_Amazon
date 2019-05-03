@@ -37,19 +37,19 @@ $database = "ece_amazon";
 					elseif($row = mysqli_fetch_assoc($result)){
 						
 
-							if ($MdP != $row['Mdp']){
+							if ($MdP != $row['Mdp_admin']){
 
 								header("Location: index.php?Mdp=error_try again");
 								exit();
 
 							}
-							elseif($MdP == $row['Mdp']){
+							elseif($MdP == $row['Mdp_admin']){
 
 								//on crée une session : pk faire ça ? C'est hyper improtant car une session permet de conserver des variables ($_SESSIONS['blabla']) sur TOUTES les pages du sites, on pourra ainsi les utiliser durant la visite de l'utilisateur (voir : https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/4239476-session-cookies ).
 								session_start();
 
 
-								$_SESSION['id_admin'] = $row['ID'];
+								$_SESSION['id_admin'] = $row['Id_admin'];
 								$_SESSION['pseudo_admin'] = $row['Pseudo'];
 								$_SESSION['email_admin'] = $row['Email'];
 								header("Location: admin.php?login=success");
