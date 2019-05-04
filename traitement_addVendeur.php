@@ -22,7 +22,7 @@
 
 					//Les charactères saisis sont ils valides ?
 					// preg_match("caractères à chercher dans $var", $var) : on check dans dans $prenom et $nom si les charactères sont valides (alphabet latin min et maj). Exemple : si on met de l'alphabet arabe le compte ne sera pas ajouté dans la bdd : on évite les caractères relou. 
-					header("Location: inscription_acheteurs.php?création=prenom_nom_invalide");
+					header("Location: AddVendeur.php?création=prenom_nom_invalide");
 					exit();
 				}
 
@@ -30,7 +30,7 @@
 
 					
 						//filter_var(chaine de caractères, FILTER_VALIDATE_EMAIL): filter_var peut filtrer n'importe quelle chaine de caractères avec un filtre existant (second paramètre). Ici FILTER_VALIDATE_EMAIL est un des filtres dispo dans la docu de php qui permet de verifier si le string est bien un email. 
-						header("Location: inscription_acheteurs.php?création=email_invalide");
+						header("Location: AddVendeur.php?création=email_invalide");
 						exit();
 				}
 			
@@ -41,7 +41,7 @@
 						$verification = mysqli_num_rows($result);
 						if($verification > 0)
 						{
-							header("Location: inscription_acheteurs.php?création=pseudo_ou_email_deja_utilise");
+							header("Location: AddVendeur.php?création=pseudo_ou_email_deja_utilise");
 							exit();
 
 						}

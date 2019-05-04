@@ -93,17 +93,25 @@
 
 						            	$_SESSION['num_colonne'] = $colonne;
 
-						            echo '
+							            echo '
 
 
 
-								      <tr>
-								        <td>'.$colonne['Pseudo_vend'].'</td>
-								        <td>'.$colonne['Email_vend'].'</td>
+									    	<tr>
+									        	<td>'.$colonne['Pseudo_vend'].'</td>
+									        	<td>'.$colonne['Email_vend'].'</td>
 
-								        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+									        	<td> 
+									        		<form action="Supp_Vendeur.php" method="POST">
 
-								      </tr>';}
+									        			<input type="hidden" name="id_vend" value="'.$colonne['Id_vendeur'].'"> 
+									        			<button type="submit" name="Supprimer" class="btn btn-outline-danger"> Supprimer
+									        			</button>
+									        		</form>
+									        	</td>
+									        	
+									        </tr>';
+								  	}
 						        ?>
 
 						    </tbody>
