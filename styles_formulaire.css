@@ -1,0 +1,37 @@
+@charset "UTF-8"
+
+body, html { 
+	padding: 0px; 
+	margin: 0px; 
+	
+} 
+
+body
+{
+	background-color: #FFFFFF; 
+}
+
+.container-fluid{
+
+	padding : 0px;
+}
+
+
+.colonne-centree
+{
+	float: none;
+	margin: 0 auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
