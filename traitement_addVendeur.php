@@ -18,15 +18,8 @@
 
 				//Détection d'erreurs
 				// On vérifie si les champs ne sont pas vides. Si c'est vide on affiche un message dans la barre de navigation "création=champs_vides"
-				if(!preg_match("/^[a-zA-Z]*$/",$prenom)|| !preg_match("/^[a-zA-Z]*$/",$nom)){//interet des else : etre sur que l'on passe par tous les tests de conditions
-
-					//Les charactères saisis sont ils valides ?
-					// preg_match("caractères à chercher dans $var", $var) : on check dans dans $prenom et $nom si les charactères sont valides (alphabet latin min et maj). Exemple : si on met de l'alphabet arabe le compte ne sera pas ajouté dans la bdd : on évite les caractères relou. 
-					header("Location: AddVendeur.php?création=prenom_nom_invalide");
-					exit();
-				}
-
-				elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+				
+				if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 
 					
 						//filter_var(chaine de caractères, FILTER_VALIDATE_EMAIL): filter_var peut filtrer n'importe quelle chaine de caractères avec un filtre existant (second paramètre). Ici FILTER_VALIDATE_EMAIL est un des filtres dispo dans la docu de php qui permet de verifier si le string est bien un email. 
