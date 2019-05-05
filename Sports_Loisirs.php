@@ -66,7 +66,7 @@
 
 				    $database = "ece_amazon";
 				    $conn = mysqli_connect('localhost', 'root', '', $database );
-					$sql ="SELECT * FROM item WHERE Categorie ='Sport et Loisir '";
+					$sql ="SELECT * FROM item WHERE Categorie ='Sport et Loisir'";
 					$result = mysqli_query($conn, $sql);
 				
 					while($colonne = mysqli_fetch_assoc($result)){
