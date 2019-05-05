@@ -2,6 +2,8 @@
 
   session_start();
 
+  //"SELECT * FROM item WHERE Categorie="Livre" ORDER BY Quantite_vendu"
+
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +11,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Admin</title>
+  <title>Vente Flash</title>
 
   <!-- Debut CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
@@ -48,83 +50,85 @@
 
 <h3 id="description">Livres</h3>
 <div class="col-sm">
-  <div id="Carousel1" class="carousel slide" data-ride="carousel">
+            <div id="Carousel1" class="carousel slide" data-ride="carousel">
 
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
-      <li data-target="#Carousel1" data-slide-to="1"></li>
-      <li data-target="#Carousel1" data-slide-to="2"></li>
-      <li data-target="#Carousel1" data-slide-to="3"></li>
-    </ul>
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel1" data-slide-to="1"></li>
+                <li data-target="#Carousel1" data-slide-to="2"></li>
+                <li data-target="#Carousel1" data-slide-to="3"></li>
+              </ul>
+<?php 
 
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-       <div class="row">
-          <div class="col-sm-3">
-            <img src="images/livre1.jpg">
-          </div>
-          <div class="col-sm-9" id="test">
-            <h4>Notre Dame</h4>
-            <p>Il était là, grave, immobile, absorbé dans un regard et dans une pensée. Tout Paris était sous ses pieds, avec les mille flèches de ses édifices et son circulaire horizon de molles collines, avec son fleuve qui serpente sous ses ponts et son peuple qui ondule dans ses rues, avec le nuage de ses fumées, avec la chaîne montueuse de ses toits qui presse Notre-Dame de ses mailles redoublées.</p>
-            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-          </div>
-        </div>
-      </div>
+            $database = "ece_amazon";
+            $conn = mysqli_connect('localhost', 'root', '', $database );
+          $sql ="SELECT * FROM item WHERE Categorie='Livre' ORDER BY Quantite_vendu DESC LIMIT 1";
+          $result = mysqli_query($conn, $sql);
+        
+            while($colonne = mysqli_fetch_assoc($result)){
 
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-sm-3">
-            <img src="images/livre2.jpg">
-          </div>
 
-          <div class="col-sm-9" id="test">
-            <h4>Zola</h4>
-            <p>1885. Disparition de Hugo. Apparition de Germinal. Voici, dans la France moderne et industrielle, les " Misérables " de Zola. Ce roman des mineurs, c'est aussi l'Enfer, dans un monde dantesque, où l'on " voyage au bout de la nuit "</p>
-            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-          </div>
-        </div>
-      </div>
+            echo '  
+          <div class="col-sm">
+            <div id="Carousel1" class="carousel slide" data-ride="carousel">
 
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-sm-3">
-            <img src="images/livre3.jpg">
-          </div>
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel1" data-slide-to="1"></li>
+                <li data-target="#Carousel1" data-slide-to="2"></li>
+                <li data-target="#Carousel1" data-slide-to="3"></li>
+              </ul>
 
-          <div class="col-sm-9" id="test">
-            <h4>Zola</h4>
-            <p>Valentin, vingt-cinq ans, mène une vie de dandy vouée aux plaisirs et jure qu'il ne se mariera jamais, de peur d'être trompé. Quand son oncle, las de l'entretenir, lui propose de s'unir à Cécile de Mantes, une riche aristocrate, Valentin parie qu'il séduira incognito sa promise...</p>
-            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-          </div>
-        </div>
-      </div>
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                 <div class="row">
+                    <div class="col-sm-3">
+                      <img src="images/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
+                    </div>
+                    <div class="col-sm-9" id="test">
+                      <h4>'.$colonne['Nom_item'].'</h4>
+                      <p>'.$colonne['Description_article'].'</p>
+                      <a href="#" class="btn btn-info" role="button">Voir l article</a>
+                    </div>
+                  </div>
+                </div>';}
 
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-sm-3">
-            <img src="images/livre4.jpg">
-          </div>
+             $sql ="SELECT * FROM item WHERE Categorie='Livre' ORDER BY Quantite_vendu DESC LIMIT 1,3";
+         	 $result = mysqli_query($conn, $sql);
+        
+            while($colonne = mysqli_fetch_assoc($result)){
 
-          <div class="col-sm-9" id="test">
-            <h4>Prevert</h4>
-            <p>Le cancreil dit non avec la tête mais il dit oui avec le cœuril dit oui à ce qu'il aimeil dit non au professeuril est debouton le questionneet tous les problèmes sont poséssoudain le fou rire le prendet il efface toutles chiffres et les motsles dates et les nomsles phrases et les piègeset malgré les menaces du maîtresous les huées des enfants prodigesavec des craies de toutes les couleurssur le tableau noir du malheuril dessine le visage du bonheur.</p>
-            <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-          </div>
-        </div>
-    </div>
 
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#Carousel1" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#Carousel1" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
+            echo '
 
-  </div>
-</div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-sm-3">
+                      <img src="images/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
+                    </div>
+                    <div class="col-sm-9" id="test">
+                      <h4>'.$colonne['Nom_item'].'</h4>
+                      <p>'.$colonne['Description_article'].'</p>
+                      <a href="#" class="btn btn-info" role="button">Voir l article</a>
+                    </div>
+                </div>
+            </div>
+           	</div>
+
+              <!-- Left and right controls -->
+              <a class="carousel-control-prev" href="#Carousel1" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#Carousel1" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+
+            </div>
+          </div>';}
+          ?>
 
 <h3 id="description">Musique</h3>
 <div class="col-sm">

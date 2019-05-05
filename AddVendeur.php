@@ -42,36 +42,38 @@
 
 	?>
 
-	<!-- Debut à propos -->
-	<!--Container fluid colle tous les éléments automatiquement-->
-	<div class = "container-fluid">
+	<section class = "container-fluid fomulaire">
 
-		<!-- Créons trois colonnes qui contiendront des articles (images + textes) décrivant le but du site avec div "row"-->
-		<!-- Etape 1 créer le container qui contiendra la ligne-->
+		 <div class="row">
+				<!-- Colonne-centree est contenu dans le CSS et permet de mettre tout le contenu au centre de la ligne-->
+				<div class = "col-md-5 colonne-centree">
+				<!-- Default form login -->
+					<form class="text-center border border-light p-5" action="traitement_addVendeur.php" method="POST">
 
-		<div class = "container">
+						<p class="h4 mb-4">Ajouter un vendeur</p>
 
-			<h2 id="description"> Ajouter un vendeur </h2>
-			<hr class="separateur">
-			<!-- Etape 2 créer la ligne qui contiendra les colonnes-->
-			<form action="/action_page.php">
-				<div class="form-group">
-			      <label for="email">Email:</label>
-			      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-			    </div>
-			    <div class="form-group">
-			      <label for="name">Nom:</label>
-			      <input type="text" class="form-control" id="nom" placeholder="Enter name" name="nom">
-			    </div>
-			    <div class="form-group">
-			      <label for="Prenom">Prenom:</label>
-			      <input type="text" class="form-control" id="prenom" placeholder="Enter name" name="prenom">
-			    </div>
-			    <button type="submit" class="btn btn-default">Submit</button>
-			</form>
-		</div>	
-	</div>
-	<!-- fin à propos -->
+						 <div class="form-group">
+						    <label>Pseudo Vendeur</label>
+						    <input type="text" class="form-control"  name="pseudo" placeholder="Pvendeur" required>
+						  </div>
+
+						  <div class="form-group">
+						    <label>Adresse mail</label>
+						    <input type="text" class="form-control"  name="email" placeholder="Ex : paulo.tran@XXXXXX.com" required>
+						  </div>
+
+						  <div class="form-group">
+						    <label>Mot de passe</label>
+						    <input type="password" class="form-control"  name="mdp" placeholder="Mot de passe" required>
+						  </div>
+	 
+						  
+						  <button type="submit" name ="inscription" class="btn btn-primary">Ajouter</button>
+					</form>
+				</div>
+			</div>			     
+
+	</section>
 
 	<!-- Debut footer / contact -->
 	<?php
