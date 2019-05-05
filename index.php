@@ -51,6 +51,7 @@
 
 	<div class = "container-fluid banner">
 
+
 		<div class="row">
 		
 			<article class = "ban">
@@ -67,7 +68,6 @@
 
 							if(isset($_SESSION['id_acheteur']))
 							{
-
 								echo  '<h1> Bonjour'.$_SESSION['pseudo_ach'].'</h1>';	
 
 							}
@@ -79,7 +79,6 @@
 							elseif(isset($_SESSION['id_admin']))
 							{
 								echo  '<h1> Bonjour'.$_SESSION['pseudo_admin'].'</h1>';	
-
 
 							}else {
 
@@ -95,51 +94,8 @@
 				 
 			</article>
 		</div>
-	</section>
-	<!-- fin banière -->
-
-
-	<div class="col">
-		<h2 id="description">Les meilleures ventes toutes catégories</h2>
-		<hr class="separateur">
 	</div>
-
-	<div id="Carousel1" class="carousel slide" data-ride="carousel">
-
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
-    <li data-target="#Carousel1" data-slide-to="1"></li>
-    <li data-target="#Carousel1" data-slide-to="2"></li>
-    <li data-target="#Carousel1" data-slide-to="3"></li>
-  </ul>
-
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/test1.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test2.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test3.jpg">
-    </div>
-    <div class="carousel-item">
-      <img src="images/test4.jpg">
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#Carousel1" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#Carousel1" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-
-</div>
-
+	<!-- fin banière -->
 
 
 	<!-- Debut à propos -->
@@ -176,7 +132,6 @@
 					<div class="text-center">
   						<img src="laure.jpg" class="img-thumbnail" alt="laure" style =" width:200px; height:250px">
 					</div>
-
 
 				</article>
 

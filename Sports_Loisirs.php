@@ -117,6 +117,7 @@
 					                             <div class="titre_article">
 
 					                            	<h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
 					                             </div>
 
 					                             <!-- -->

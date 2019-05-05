@@ -30,28 +30,26 @@
 					$sql ="SELECT * FROM item WHERE Id_item ='$id_item'";
 					$result = mysqli_query($conn, $sql);
 					$verification = mysqli_num_rows($result);
-					$row = mysqli_fetch_assoc($result);
+					$row = mysqli_fetch_assoc($result); 
 
 					if($verification==1){
-
-
-						if($row['Categorie'] == 'Livre')
+						if($row['Categorie']=='Livre')
 						{
-							$sql = "DELETE FROM collection_livre WHERE Id_item ='$id_item'";
-						    $result = mysqli_query($conn, $sql);
+							$sql = "DELETE FROM collection_livre WHERE Id_item = '$id_item'"; 
+							$result = mysqli_query($conn, $sql); 
 
-						}elseif ($row['Categorie'] == 'Vetement')
+						}elseif ($row['Categorie']=='Vetement')
 						{
-							$sql = "DELETE FROM couleur WHERE Id_item ='$id_item'";
-						    $result = mysqli_query($conn, $sql);
+							$sql = "DELETE FROM couleur WHERE Id_item = '$id_item'"; 
+							$result = mysqli_query($conn, $sql);
+							
+							$sql = "DELETE FROM taille WHERE Id_item = '$id_item'"; 
+							$result = mysqli_query($conn, $sql); 
 
-						    $sql = "DELETE FROM taille WHERE Id_item ='$id_item'";
-						    $result = mysqli_query($conn, $sql);
-
-						    $sql = "DELETE FROM type_vetement WHERE Id_item ='$id_item'";
-						    $result = mysqli_query($conn, $sql);
+							$sql = "DELETE FROM type_vetement WHERE Id_item = '$id_item'"; 
+							$result = mysqli_query($conn, $sql); 
 						}
-
+						
 						//Suppression de la ligne de l'item en question dans la bdd
 						$sql = "DELETE FROM item WHERE Id_item ='$id_item'";
 						$result = mysqli_query($conn, $sql);

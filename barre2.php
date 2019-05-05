@@ -128,7 +128,8 @@
 
                             
                               <li class="nav-item">
-                                 <a class="nav-link" href="#">Vendre</a>
+
+                                 <a class="nav-link" href="vendeur_con.php">Vendre</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#">Vente flash</a> 

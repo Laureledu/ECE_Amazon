@@ -115,6 +115,7 @@
 					                             <div class="titre_article">
 
 					                            	<h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
 					                             </div>
 
 					                             <!-- -->
@@ -150,6 +151,7 @@
 											        </label>
 
 						                        <button class="btn btn-outline btn-warning btn-sm btn-block btn-primary " name="ajouter_panier" type="submit">
+
 						                        <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
 					                       </div>
 					                    </div>

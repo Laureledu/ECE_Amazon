@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+body
+{
+	background-color: #A9A9A9; 
+}
+body, html { 
+	padding: 0px; 
+	margin: 0px; 
+	
+} 
+/* Pas très important : enlevement du soulignage des liens*/
+a {
+	text-decoration: none;
+}
+
+/* Hover correspond à l'action de passer sur les liens avec la souris : le soulignage c'est moche !*/
+a:hover {
+
+	text-decoration: none;
+}
+
+.container-fluid{
+
+	padding : 0px;
+}
+
+.separateur
+{ 
+	height : 5px;
+	width: 40%;
+	border: none;
+	box-shadow: none;
+	background-color: #E8392E;
+}
+/* Design du header*/
+.header
+{
+	background-color: #E8392E;
+	height: 70px;
+	/* pour centrer le contenu du header et faire en sorte qu'il ne dépasse pas la hauteur*/
+	line-height: 70px;
+
+}
+
+
+.logo
+{
+	/* Couleur blanche*/
+	color :#ffffff;
+	/* majuscule*/
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	float: left;
+
+}
+
+/* Menu qui correspond à la barre de navigation*/
+.menu
+{
+	float:right;
+}
+
+/* Design des liens du menu*/
+.menu a
+{
+	color :#ffffff;
+	/* espacement entre liens*/
+	margin-right: 20px;
+	
+}
+
+/* Quand on passe sur les lien de la barre de nav ils vont : devenir bleu foncé */
+.menu a:hover
+{
+	color :#2C3E52;	
+}
+
+.red{
+    color:red;
+    }
+
+
+
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 10px 60px;
+	margin: 35px 500px 60px;
+    border: 1px solid GREY;
+    
+
+
+}
+
+/* Pas très important : enlevement du soulignage des liens*/
+.footer
+{	
+
+	background-color: #222; 
+	color: #ccc; 
+	padding: 60px 0 30px; 
+	
+}
+
+.footer-copyright { 
+	color: #666; 
+	padding: 40px 0; 
+}
+
+
+
+
+

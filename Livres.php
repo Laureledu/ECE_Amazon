@@ -13,8 +13,7 @@
 
 	<!-- Debut CSS -->
 	
-
-	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="categories.css">
 	<link rel="stylesheet" type="text/css" href="styles_footer.css">
@@ -28,7 +27,6 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
 
 	
 	<script type="text/javascript">
@@ -47,7 +45,6 @@
 		include_once 'barre2.php'
 		
 	?>
-
 	<!-- Formulaire de connexion avec bootsrap -->
 	<section class = "container-fluid ">
 
@@ -65,7 +62,9 @@
 
 				    $database = "ece_amazon";
 				    $conn = mysqli_connect('localhost', 'root', '', $database );
-					$sql ="SELECT * FROM item WHERE Categorie ='Livre'";
+
+					$sql ="SELECT * FROM item INNER JOIN collection_livre WHERE Categorie ='Livre' AND item.Id_item = collection_livre.Id_item";
+
 					$result = mysqli_query($conn, $sql);
 					
 
@@ -80,8 +79,6 @@
 							mysqli_close($conn);
 						}
 						else{
-
-
 
 						    echo '
 
@@ -118,6 +115,7 @@
 					                             <div class="titre_article">
 
 					                            	<h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
 					                             </div>
 
 					                             <!-- -->
@@ -138,7 +136,8 @@
 
 
 						                              	<div class="price col-md-12">
-						                                    <strong>Collection:</strong><span class="pull-right"> '.$colonne['Collection'].' </span>
+
+						                                    <strong>Collection:</strong><span class="pull-right"> '.$colonne['Nom_collection'].' </span>
 						                              </div>
 
 						                                <!-- Prix  -->
@@ -160,6 +159,7 @@
 											        </label>
 
 						                        <button class="btn btn-outline btn-warning btn-sm btn-block btn-primary " name="ajouter_panier" type="submit">
+
 						                        <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
 					                       </div>
 					                    </div>
