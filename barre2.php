@@ -82,6 +82,7 @@
                                 '.$_SESSION['pseudo_du_vendeur'].'
                                </a>
                                <div class="dropdown-menu">
+                               <a href="profil_vendeur.php" name="retour">Votre profil </a>
                                   <form role="form" action="traitement_deco_acheteur.php" method="post" >
                                     <button  type="submit" name = "deconnexion" class="deco btn-danger btn-sm"> Déconnexion </button>
                                  </form>

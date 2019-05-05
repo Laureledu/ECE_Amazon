@@ -39,7 +39,7 @@
 	<!-- fin Jquery -->
 </head>
 
-<body>
+<body>s
 
 	<?php
 

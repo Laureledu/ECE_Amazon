@@ -15,12 +15,15 @@
 
   <!-- Debut CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+  <link rel="stylesheet" type="text/css" href="styles_footer.css">
+  <link rel="stylesheet" type="text/css" href="categories.css">
   <link rel="stylesheet" type="text/css" href="styles_index.css">
   <link rel="stylesheet" type="text/css" href="nav.css">
-  <link rel="stylesheet" type="text/css" href="styles_carousel.css">
+
   <!-- fin CSS -->
 
   <!-- Debut Jquery -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
@@ -29,7 +32,7 @@
   <script type="text/javascript">
     $(document).ready(
     function(){ 
-      $('.banner').height($(window).height())
+      $('.header').height($(window).height())
     
     });   
   </script> 
@@ -45,243 +48,418 @@
 
   ?>
 
-<h2 id="description"> Ventes Flash</h2>
-<hr class="separateur">
+</br>
+</br>
+  <h2 id="description"> Ventes Flash</h2>
+  <hr class="separateur">
 
-<h3 id="description">Livres</h3>
-<div class="col-sm">
-            <div id="Carousel1" class="carousel slide" data-ride="carousel">
-
-              <!-- Indicators -->
-              <ul class="carousel-indicators">
-                <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
-                <li data-target="#Carousel1" data-slide-to="1"></li>
-                <li data-target="#Carousel1" data-slide-to="2"></li>
-                <li data-target="#Carousel1" data-slide-to="3"></li>
-              </ul>
-<?php 
-
-            $database = "ece_amazon";
-            $conn = mysqli_connect('localhost', 'root', '', $database );
-          $sql ="SELECT * FROM item WHERE Categorie='Livre' ORDER BY Quantite_vendu DESC LIMIT 1";
-          $result = mysqli_query($conn, $sql);
-        
-            while($colonne = mysqli_fetch_assoc($result)){
+ <div class ="container-fluid"> 
 
 
-            echo '  
-          <div class="col-sm">
-            <div id="Carousel1" class="carousel slide" data-ride="carousel">
+    <div class="container">
 
-              <!-- Indicators -->
-              <ul class="carousel-indicators">
-                <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
-                <li data-target="#Carousel1" data-slide-to="1"></li>
-                <li data-target="#Carousel1" data-slide-to="2"></li>
-                <li data-target="#Carousel1" data-slide-to="3"></li>
-              </ul>
+      <div class="row">
 
-              <!-- The slideshow -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                 <div class="row">
-                    <div class="col-sm-3">
-                      <img src="images/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
-                    </div>
-                    <div class="col-sm-9" id="test">
-                      <h4>'.$colonne['Nom_item'].'</h4>
-                      <p>'.$colonne['Description_article'].'</p>
-                      <a href="#" class="btn btn-info" role="button">Voir l article</a>
-                    </div>
+        <div class="col-2 col-sm-12">
+          <h3 id="description">Livres</h3>
+          <hr class="separator">
+
+        </div>
+
+
+         
+                <?php 
+
+                      $database = "ece_amazon";
+                      $conn = mysqli_connect('localhost', 'root', '', $database );
+                    $sql ="SELECT * FROM item WHERE Categorie='Livre' ORDER BY Quantite_vendu DESC LIMIT 4";
+                    $result = mysqli_query($conn, $sql);
+                  
+                      while($colonne = mysqli_fetch_assoc($result)){
+
+
+                      echo '  
+
+                          <form  action="ajout_panier.php" method="POST">
+
+                    <!-- On récupère id_item de la bdd en la cachant à lutilisateur au début de la création de la boite-->
+                   <input type="hidden" name="id_item" value="'.$colonne['Id_item'].'"> 
+
+
+                   <!-- Debut boite-->
+
+                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box ">
+
+
+                      <div class="col-item">
+
+                          <div class="image_item ">
+
+                              <div class="absolute-aligned">
+
+                                   <img src="photo_item/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
+                              </div>
+
+                          </div>
+
+                          <!-- -->
+                          <div class="info">
+                            <!-- -->
+                              <div class="row">
+                                <!-- -->
+                                  <div class="price col-md-12">
+
+                                    <!-- -->
+                                       <div class="titre_article">
+
+                                        <h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
+                                       </div>
+
+                                       <!-- -->
+                                     <div class="row">
+                                        <!-- -->
+                                          <div class="price col-md-12">
+                                                <strong>Categorie:</strong><span class="pull-right"> '.$colonne['Categorie'].'  </span>
+                                          </div>
+
+                                            <div class="price col-md-12">
+                                                <strong>Genre:</strong><span class="pull-right">'.$colonne['Genre'].'</span>
+                                          </div>
+
+
+                                            <!-- Prix  -->
+                                           <div class="price col-md-12">
+                                                <strong>Prix : </strong><span class="pull-right price-text-color">'.$colonne['Prix_unite'].'€</span>
+                                           </div>
+                                      </div>    
+                                  </div>
+                              </div>
+                               <!-- -->
+                              <div class="separator clear-left">
+                                 <div class="separator clear-left">
+                                     <p></p>
+
+                                     <input type="number" id="quantite" name="quantite">
+                              <label class="form-quantite" for="quantite">
+                                Quantité
+                              </label>
+
+                                    <button class="btn btn-outline btn-warning btn-sm btn-block " name="ajouter_panier" type="submit">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
+                                 </div>
+                              </div>
+                              <!-- -->
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
                   </div>
-                </div>';}
+                </form>';}
 
-             $sql ="SELECT * FROM item WHERE Categorie='Livre' ORDER BY Quantite_vendu DESC LIMIT 1,3";
-         	 $result = mysqli_query($conn, $sql);
-        
-            while($colonne = mysqli_fetch_assoc($result)){
+                    ?>
+        </div>   
+                  
+         <div class="row">
+            <div class="col-2 col-sm-12">
+               <h3 id="description">Musique</h3>
+               <hr class="separator">
+          </div>
+
+                <?php 
+
+                      $database = "ece_amazon";
+                      $conn = mysqli_connect('localhost', 'root', '', $database );
+                    $sql ="SELECT * FROM item WHERE Categorie='Musique' ORDER BY Quantite_vendu DESC LIMIT 4";
+                    $result = mysqli_query($conn, $sql);
+                  
+                      while($colonne = mysqli_fetch_assoc($result)){
 
 
-            echo '
+                      echo '  
 
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-sm-3">
-                      <img src="images/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
-                    </div>
-                    <div class="col-sm-9" id="test">
-                      <h4>'.$colonne['Nom_item'].'</h4>
-                      <p>'.$colonne['Description_article'].'</p>
-                      <a href="#" class="btn btn-info" role="button">Voir l article</a>
-                    </div>
-                </div>
+                          <form  action="ajout_panier.php" method="POST">
+
+                    <!-- On récupère id_item de la bdd en la cachant à lutilisateur au début de la création de la boite-->
+                   <input type="hidden" name="id_item" value="'.$colonne['Id_item'].'"> 
+
+
+                   <!-- Debut boite-->
+
+                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box ">
+
+
+                      <div class="col-item">
+
+                          <div class="image_item ">
+
+                              <div class="absolute-aligned">
+
+                                   <img src="photo_item/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
+                              </div>
+
+                          </div>
+
+                          <!-- -->
+                          <div class="info">
+                            <!-- -->
+                              <div class="row">
+                                <!-- -->
+                                  <div class="price col-md-12">
+
+                                    <!-- -->
+                                       <div class="titre_article">
+
+                                        <h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
+                                       </div>
+
+                                       <!-- -->
+                                     <div class="row">
+                                        <!-- -->
+                                          <div class="price col-md-12">
+                                                <strong>Categorie:</strong><span class="pull-right"> '.$colonne['Categorie'].'  </span>
+                                          </div>
+
+                                            <div class="price col-md-12">
+                                                <strong>Genre:</strong><span class="pull-right">'.$colonne['Genre'].'</span>
+                                          </div>
+
+
+                                            <!-- Prix  -->
+                                           <div class="price col-md-12">
+                                                <strong>Prix : </strong><span class="pull-right price-text-color">'.$colonne['Prix_unite'].'€</span>
+                                           </div>
+                                      </div>    
+                                  </div>
+                              </div>
+                               <!-- -->
+                              <div class="separator clear-left">
+                                 <div class="separator clear-left">
+                                     <p></p>
+
+                                     <input type="number" id="quantite" name="quantite">
+                              <label class="form-quantite" for="quantite">
+                                Quantité
+                              </label>
+
+                                    <button class="btn btn-outline btn-warning btn-sm btn-block " name="ajouter_panier" type="submit">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
+                                 </div>
+                              </div>
+                              <!-- -->
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                  </div>
+                </form>';}
+
+                    ?>
+
+
+
+          
+         </div>
+
+
+          <div class="row">
+
+             <div class="col-2 col-sm-12">
+                <h3 id="description">Vetements</h3>
+                <hr class="separator">
+           </div>
+
+                <?php 
+
+                      $database = "ece_amazon";
+                      $conn = mysqli_connect('localhost', 'root', '', $database );
+                    $sql ="SELECT * FROM item WHERE Categorie='Vetement' ORDER BY Quantite_vendu DESC LIMIT 4";
+                    $result = mysqli_query($conn, $sql);
+                  
+                      while($colonne = mysqli_fetch_assoc($result)){
+
+
+                      echo '  
+
+                          <form  action="ajout_panier.php" method="POST">
+
+                    <!-- On récupère id_item de la bdd en la cachant à lutilisateur au début de la création de la boite-->
+                   <input type="hidden" name="id_item" value="'.$colonne['Id_item'].'"> 
+
+
+                   <!-- Debut boite-->
+
+                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box ">
+
+
+                      <div class="col-item">
+
+                          <div class="image_item ">
+
+                              <div class="absolute-aligned">
+
+                                   <img src="photo_item/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
+                              </div>
+
+                          </div>
+
+                          <!-- -->
+                          <div class="info">
+                            <!-- -->
+                              <div class="row">
+                                <!-- -->
+                                  <div class="price col-md-12">
+
+                                    <!-- -->
+                                       <div class="titre_article">
+
+                                        <h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
+                                       </div>
+
+                                       <!-- -->
+                                     <div class="row">
+                                        <!-- -->
+                                          <div class="price col-md-12">
+                                                <strong>Categorie:</strong><span class="pull-right"> '.$colonne['Categorie'].'  </span>
+                                          </div>
+
+                                            <div class="price col-md-12">
+                                                <strong>Genre:</strong><span class="pull-right">'.$colonne['Genre'].'</span>
+                                          </div>
+
+
+                                            <!-- Prix  -->
+                                           <div class="price col-md-12">
+                                                <strong>Prix : </strong><span class="pull-right price-text-color">'.$colonne['Prix_unite'].'€</span>
+                                           </div>
+                                      </div>    
+                                  </div>
+                              </div>
+                               <!-- -->
+                              <div class="separator clear-left">
+                                 <div class="separator clear-left">
+                                     <p></p>
+
+                                     <input type="number" id="quantite" name="quantite">
+                              <label class="form-quantite" for="quantite">
+                                Quantité
+                              </label>
+
+                                    <button class="btn btn-outline btn-warning btn-sm btn-block " name="ajouter_panier" type="submit">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
+                                 </div>
+                              </div>
+                              <!-- -->
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                  </div>
+                </form>';}
+
+                    ?>
+
+           </div>  
+
+           <div class="row"> 
+
+             <div class="col-2 col-sm-12">
+                <h3 id="description">Sport et Loisir</h3>
+                <hr class="separator">
             </div>
-           	</div>
 
-              <!-- Left and right controls -->
-              <a class="carousel-control-prev" href="#Carousel1" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a class="carousel-control-next" href="#Carousel1" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </a>
+                <?php 
 
-            </div>
-          </div>';}
-          ?>
+                      $database = "ece_amazon";
+                      $conn = mysqli_connect('localhost', 'root', '', $database );
+                    $sql ="SELECT * FROM item WHERE Categorie='Sport et Loisir' ORDER BY Quantite_vendu DESC LIMIT 4";
+                    $result = mysqli_query($conn, $sql);
+                  
+                      while($colonne = mysqli_fetch_assoc($result)){
 
-<h3 id="description">Musique</h3>
-<div class="col-sm">
-  <div id="Carousel2" class="carousel slide" data-ride="carousel">
 
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
-      <li data-target="#Carousel2" data-slide-to="1"></li>
-      <li data-target="#Carousel2" data-slide-to="2"></li>
-      <li data-target="#Carousel2" data-slide-to="3"></li>
-    </ul>
+                      echo '  
 
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/test1.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
+                          <form  action="ajout_panier.php" method="POST">
+
+                    <!-- On récupère id_item de la bdd en la cachant à lutilisateur au début de la création de la boite-->
+                   <input type="hidden" name="id_item" value="'.$colonne['Id_item'].'"> 
+
+
+                   <!-- Debut boite-->
+
+                   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 box ">
+
+
+                      <div class="col-item">
+
+                          <div class="image_item ">
+
+                              <div class="absolute-aligned">
+
+                                   <img src="photo_item/'.$colonne['Photo_article'].'"class="img-responsive" alt="a" />
+                              </div>
+
+                          </div>
+
+                          <!-- -->
+                          <div class="info">
+                            <!-- -->
+                              <div class="row">
+                                <!-- -->
+                                  <div class="price col-md-12">
+
+                                    <!-- -->
+                                       <div class="titre_article">
+
+                                        <h5><a href ="fiche_item.php?id='.$colonne['Id_item'].'">'.$colonne['Nom_item'].'</a></h5>
+
+                                       </div>
+
+                                       <!-- -->
+                                     <div class="row">
+                                        <!-- -->
+                                          <div class="price col-md-12">
+                                                <strong>Categorie:</strong><span class="pull-right"> '.$colonne['Categorie'].'  </span>
+                                          </div>
+
+                                            <div class="price col-md-12">
+                                                <strong>Genre:</strong><span class="pull-right">'.$colonne['Genre'].'</span>
+                                          </div>
+
+
+                                            <!-- Prix  -->
+                                           <div class="price col-md-12">
+                                                <strong>Prix : </strong><span class="pull-right price-text-color">'.$colonne['Prix_unite'].'€</span>
+                                           </div>
+                                      </div>    
+                                  </div>
+                              </div>
+                               <!-- -->
+                              <div class="separator clear-left">
+                                 <div class="separator clear-left">
+                                     <p></p>
+
+                                     <input type="number" id="quantite" name="quantite">
+                              <label class="form-quantite" for="quantite">
+                                Quantité
+                              </label>
+
+                                    <button class="btn btn-outline btn-warning btn-sm btn-block " name="ajouter_panier" type="submit">
+                                    <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
+                                 </div>
+                              </div>
+                              <!-- -->
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                  </div>
+                </form>';}
+
+                    ?>
+           </div>   
+
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test2.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test3.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test4.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#Carousel2" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#Carousel2" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-
-  </div>
-</div>
-
-<h3 id="description">Vetements</h3>
-<div class="col-sm">
-  <div id="Carousel3" class="carousel slide" data-ride="carousel">
-
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
-      <li data-target="#Carousel3" data-slide-to="1"></li>
-      <li data-target="#Carousel3" data-slide-to="2"></li>
-      <li data-target="#Carousel3" data-slide-to="3"></li>
-    </ul>
-
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/test1.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test2.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test3.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test4.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#Carousel3" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#Carousel3" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-
-  </div>
-</div>
-
-<h3 id="description">Sport</h3>
-<div class="col-sm">
-  <div id="Carousel4" class="carousel slide" data-ride="carousel">
-
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#Carousel4" data-slide-to="0" class="active"></li>
-      <li data-target="#Carousel4" data-slide-to="1"></li>
-      <li data-target="#Carousel4" data-slide-to="2"></li>
-      <li data-target="#Carousel4" data-slide-to="3"></li>
-    </ul>
-
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/test1.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test2.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test3.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="images/test4.jpg">
-        <div class="carousel-caption">
-          <a href="#" class="btn btn-info" role="button">Voir l'article</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#Carousel4" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#Carousel4" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-
-  </div>
-</div>
 
   <!-- Debut footer / contact -->
   <?php
