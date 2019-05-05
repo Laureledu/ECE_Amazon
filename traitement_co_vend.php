@@ -72,4 +72,3 @@ $database = "ece_amazon";
 		}
 
 ?>
-

@@ -1,0 +1,123 @@
+@charset "UTF-8"
+
+body, html { 
+	padding: 0px; 
+	margin: 0px; 
+	
+} 
+
+body
+{
+	background-color: #FFFFFF; 
+}
+
+/* Pas très important : enlevement du soulignage des liens*/
+a {
+	text-decoration: none;
+}
+
+/* Hover correspond à l'action de passer sur les liens avec la souris : le soulignage c'est moche !*/
+a:hover {
+
+	text-decoration: none;
+}
+
+.container-fluid{
+
+	padding : 0px;
+}
+
+.separateur
+{ 
+	height : 5px;
+	width: 40%;
+	border: none;
+	box-shadow: none;
+	background-color: #E8392E;
+}
+
+/* Design bannière*/
+
+
+.banner
+{
+	padding-top: 0;
+	width:100%;
+	max-width: 100%; 
+
+}
+
+.ban
+{	
+	
+	width:100%;
+	max-width: 100%;
+
+}
+
+.ban img
+{
+	
+	width:100%;
+	max-width: 100%; 
+
+	
+
+}
+
+
+.inner-banner
+{
+	
+	position :absolute;
+	top: 40%;
+	width: 100%; 
+	text-align : center;
+	
+}
+
+.inner-banner h1
+{
+	color :#ffffff;
+   text-shadow: 1px 2px 20px #000000;
+}
+
+.inner-banner .btn-custom
+{
+	color :#ffffff;
+	background-color :#E8392E;
+ 
+}
+
+.inner-banner .btn-custom:hover
+{
+	color :#ffffff;
+	background-color :#DE33FF;
+ 
+}
+
+/* design à propos*/
+#description
+{
+	text-align : center;
+	margin-top: 0.25%;
+	
+
+}
+
+.about article 
+{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+
+.about article h2
+{
+	text-align: center;
+}
+
+
+
+
+

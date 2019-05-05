@@ -1,0 +1,34 @@
+.container-fluid{
+
+padding: none;
+
+}
+.liste_client ul{
+
+	margin-left: 30%;
+	list-style: none;
+}
+
+.separateur
+{ 
+	height : 3px;
+	width: 40%;
+	border: none;
+	box-shadow: none;
+	background-color: #E8392E;
+	margin-bottom: 5%;
+}
+
+#titre_page
+{ 
+	text-align : center;
+	margin-top: 2%;
+}
+
+.colonne-centree
+{
+	float: none;
+	margin: 0 auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
