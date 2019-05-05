@@ -126,10 +126,10 @@
 
 	  	   			<a href="addVendeur.php" class="btn btn-info btn-block" role="button">Ajouter Vendeur</a>
 				</div>
-   				<div class="col" style="background-color:lavenderblush;">
+   				<div class="col">
 
 					    <a href="ajouter_item_admin.php" class="btn btn-primary btn-block" role="button">Ajouter Item</a>
-					    <a href="suppItem.php" class="btn btn-primary btn-block" role="button">Supprimer Item</a>
+					    <a href="gestion_items.php" class="btn btn-primary btn-block" role="button">Supprimer Item</a>
   					
 				</div>
   			</div>
