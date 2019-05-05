@@ -113,7 +113,7 @@
 
 								        </td>
 
-								        <td> <input type="number"  id="quantite" name="quantite" value = '.$colonne['Quantite'].' ></td>
+								        <td> <input type="number"  id="quantite" name="quantite" value = '.$colonne['Quantite'].' readonly></td>
 
 								        <td>'.$colonne['Prix_unite'].' € </td>
 
