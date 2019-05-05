@@ -13,12 +13,16 @@
 
 	<!-- Debut CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
-	<link rel="stylesheet" type="text/css" href="styles_index.css">
+
+	<link rel="stylesheet" type="text/css" href="styles_footer.css">
+
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="styles.admin.css">
 	<!-- fin CSS -->
 
 	<!-- Debut Jquery -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -80,56 +84,33 @@
 						      </tr>
 						    </thead>
 						    <tbody id="myTable">
-						      <tr>
-						        <td>John</td>
-						        <td>john@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>Mary</td>
-						        <td>mary@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>July</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
-						      <tr>
-						        <td>Emy</td>
-						        <td>july@example.com</td>
-						        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
-						      </tr>
+
+
+						    	<?php 
+
+						            $database = "ece_amazon";
+						            $conn = mysqli_connect('localhost', 'root', '', $database );
+						          	$sql ="SELECT * FROM vendeur";
+						          	$result = mysqli_query($conn, $sql);
+						        
+						            while($colonne = mysqli_fetch_assoc($result)){
+
+
+						            	$_SESSION['num_colonne'] = $colonne;
+
+						            echo '
+
+
+
+								      <tr>
+								        <td>'.$colonne['Pseudo_vend'].'</td>
+								        <td>'.$colonne['Email_vend'].'</td>
+
+								        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+
+								      </tr>';}
+						        ?>
+
 						    </tbody>
 						</table>
 					</div></br>

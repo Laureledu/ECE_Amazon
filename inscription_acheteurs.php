@@ -10,15 +10,16 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
 	<link rel="stylesheet" type="text/css" href="styles_formulaire.css">
-
 	<link rel="stylesheet" type="text/css" href="nav.css">
-	<link rel="stylesheet" type="text/css" href="styles_index.css">
+	<link rel="stylesheet" type="text/css" href="styles_footer.css">
 	<!-- fin CSS -->
 
 	<!-- Debut Jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	
 	<script type="text/javascript">
@@ -125,21 +126,28 @@
 
 						  <p class="h5 mb-4 mt-4">Informations paiements</p>
 
-						  <div class="form-group col-md-5 pl-1">
-						    <label >Type de carte</label>
-						    <select name = "type_carte" class="form-control" required> 
-						        <option selected>Choix...</option>
-						        <option value="Visa">Visa</option>
-						        <option value="MasterCard">MasterCard</option>
-						        <option value="American Express">American Express</option>
-						        <option value="PayPal">PayPal</option>
-						      </select>
+						  <div class="form-row">
+							  <div class="form-group col-md-6 pl-1">
+							    <label >Type de carte</label>
+							    <select name = "type_carte" class="form-control" required> 
+							        <option value="Visa">Visa</option>
+							        <option value="MasterCard">MasterCard</option>
+							        <option value="American Express">American Express</option>
+							        <option value="PayPal">PayPal</option>
+							      </select>
+							    </div>
+								
+								<div class="form-group col-md-6 ">
+							       <label >Nom propriétaire</label>
+							       <input type="text" class="form-control" name="nom_proprio" placeholder="Nom sur la carte" required>
+							    </div>
+						  
 						  </div>
 
 						  <div class="form-group">
 						  	<label >Numero de carte</label>
 
-						     <input type="text" class="form-control" name ="num_carte" pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}" placeholder="Ex : XXXXXXXXXXXXXXXX" required>
+						     <input type="text" class="form-control" name ="num_carte" pattern="[0-9]{16}" placeholder="Ex : XXXXXXXXXXXXXXXX" required>
 
 						  </div>
 
@@ -151,12 +159,12 @@
 							    </div>
 							    <div class="form-group col-md-4 ">
 							      <label >Code de sécurité</label>
-							      <input type="password" class="form-control" name="code_carte" placeholder="Code de sécurité" required>
+							      <input type="password" class="form-control" name="code_carte" pattern="[0-9]{4}" placeholder="Code de sécurité" required>
 							    </div>
 
 							    <div class="form-group col-md-4 ">
 							      <label >Cvv</label>
-							      <input type="password" class="form-control" name="cvv" placeholder="vv" required>
+							      <input type="password" class="form-control" name="cvv" pattern="[0-9]{3}" placeholder="cvv" required>
 							    </div>
 						 </div>
 

@@ -16,7 +16,7 @@
                        <a class="nav-link" href="#">Vendre</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="VenteFlash.php">Vente flash</a> 
+                       <a class="nav-link" href="#">Vente flash</a> 
                     </li>
 
                     <li class="nav-item dropdown">
@@ -51,7 +51,7 @@
                          </li>
 
                            <li class="nav-item">
-                              <a class="nav-link" href="#">Panier</a>
+                              <a class="nav-link" href="panier.php">Panier</a>
                            </li>';
                        } 
 
@@ -111,13 +111,11 @@
                                 '.$_SESSION['pseudo_admin'].'
                                </a>
                                <div class="dropdown-menu">
-                                <a  href="admin.php" name = "retour" class="deco btn btn-sm" role="button"> Votre profil </a>
                                   <form role="form" action="traitement_deco_acheteur.php" method="post" >
                                     <button  type="submit" name = "deconnexion" class="deco btn-danger btn-sm"> Déconnexion </button>
-                                  </form>
-                              </div>
-                            </li>
-                          </ul>';
+                                 </form>
+                               </div>
+                            </li>';
                           }
 
                          else{
@@ -133,7 +131,7 @@
                                  <a class="nav-link" href="#">Vendre</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="VenteFlash.php">Vente flash</a> 
+                                 <a class="nav-link" href="#">Vente flash</a> 
                               </li>
 
                               <li class="nav-item dropdown">
@@ -153,14 +151,14 @@
                             <!-- Right -->
                            <ul class="navbar-nav ml-auto">
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Panier</a>
+                                <a class="nav-link" href="panier.php">Panier</a>
                               </li>
 
                                <li class="nav-item">
                                   <a class="nav-link" href="connexion_acheteurs">Votre compte</a>
                                 </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="connexion_admin.php">admin</a>
+                                 <a class="nav-link" href="connexion_admin">admin</a>
                                </li>';
 
                        }

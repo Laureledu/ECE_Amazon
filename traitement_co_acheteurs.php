@@ -78,5 +78,6 @@ $database = "ece_amazon";
 			exit();
 		}
 	mysql_close($conn);
+	
 
 ?>
