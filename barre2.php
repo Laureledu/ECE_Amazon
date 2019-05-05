@@ -16,7 +16,7 @@
                        <a class="nav-link" href="#">Vendre</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="#">Vente flash</a> 
+                       <a class="nav-link" href="VenteFlash.php">Vente flash</a> 
                     </li>
 
                     <li class="nav-item dropdown">
@@ -111,10 +111,11 @@
                                 '.$_SESSION['pseudo_admin'].'
                                </a>
                                <div class="dropdown-menu">
+                                <a  href="admin.php" name = "retour" class="deco btn btn-sm" role="button"> Votre profil </a>
                                   <form role="form" action="traitement_deco_acheteur.php" method="post" >
                                     <button  type="submit" name = "deconnexion" class="deco btn-danger btn-sm"> Déconnexion </button>
-                                 </form>
-                               </div>
+                                  </form>
+                              </div>
                             </li>';
                           }
 
@@ -132,7 +133,7 @@
                                  <a class="nav-link" href="vendeur_con.php">Vendre</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#">Vente flash</a> 
+                                 <a class="nav-link" href="VenteFlash.php">Vente flash</a> 
                               </li>
 
                               <li class="nav-item dropdown">
