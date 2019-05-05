@@ -9,7 +9,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>connexion</title>
+	<title>Gestion items</title>
 
 	<!-- Debut CSS -->
 	
@@ -51,7 +51,7 @@
 	<section class = "container-fluid ">
 
 		<div class ="titre_page">
-			<h2> Voici notre sélection vêtement </h2>
+			<h2> Voici votre liste d'items </h2>
 			<hr class="separateur">
 		</div>
 
@@ -67,16 +67,19 @@
 
 				    if (isset($_SESSION['id_vendeur']))
 				    {
+				    	$id = $_SESSION['id_vendeur'];
 
-				    	$sql ="SELECT * FROM item WHERE Id_vendeur = '$_SESSION['id_vendeur']";
+				    	$sql ="SELECT * FROM item WHERE Id_vendeur = '$id'";
+				    	$result = mysqli_query($conn, $sql);	
 
 				    }elseif (isset($_SESSION['id_admin']))
 				    {
 
 				    	$sql ="SELECT * FROM item";
+				    	$result = mysqli_query($conn, $sql);
 				    }
 					
-					$result = mysqli_query($conn, $sql);
+					
 
 					while($colonne = mysqli_fetch_assoc($result)){
 						if($colonne <1  ){
@@ -91,7 +94,7 @@
 
 					    echo '	
 
-				        <form  action="ajout_panier.php" method="POST">
+				        <form  action="supprimer_items.php" method="POST">
 
 					          <!-- On récupère id_item de la bdd en la cachant à lutilisateur au début de la création de la boite-->
 					         <input type="hidden" name="id_item" value="'.$colonne['Id_item'].'">	
@@ -150,13 +153,8 @@
 					                       <div class="separator clear-left">
 						                         <p></p>
 
-						                         <input type="number" id="quantite" name="quantite">
-											        <label class="form-quantite" for="quantite">
-											          Quantité
-											        </label>
-
 						                        <button class="btn btn-outline btn-sm btn-block btn-primary " name="supprimer_item" type="submit">
-						                        <i class="fa icon-trash fa-fw"></i>Supprimer</button>
+						                        <i class="fa fa-trash fa-fw"></i>Supprimer</button>
 					                       </div>
 					                    </div>
 					                    <!-- -->

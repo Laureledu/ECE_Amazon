@@ -9,7 +9,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Vetements</title>
+	<title>Sport et Loisir </title>
 
 	<!-- Debut CSS -->
 	
@@ -51,7 +51,7 @@
 	<section class = "container-fluid ">
 
 		<div class ="titre_page">
-			<h2> Voici notre sélection vêtement </h2>
+			<h2> Sports et loisirs </h2>
 			<hr class="separateur">
 		</div>
 
@@ -64,23 +64,25 @@
 
 				    $database = "ece_amazon";
 				    $conn = mysqli_connect('localhost', 'root', '', $database );
-					$sql ="SELECT * FROM item WHERE Categorie ='Vetement'";
+					$sql ="SELECT * FROM item WHERE Categorie ='Sport et Loisir '";
 					$result = mysqli_query($conn, $sql);
-
+				
 					while($colonne = mysqli_fetch_assoc($result)){
-						if($colonne <1  ){
+						if($colonne<1 ){
 
 							echo"		<div class ='no_items'>
 											<h3> Désolé, nous n'avons pas d'articles à vous proposer. Essayez de visiter d'autre catégories.</h3>
 										</div>";
 
-				
+							
+							mysqli_close($conn);
 						}
 						else{
+				
 
-					    echo '	
+						    echo '	
 
-				        <form  action="ajout_panier.php" method="POST">
+					        <form  action="ajout_panier.php" method="POST">
 
 					          <!-- On récupère id_item de la bdd en la cachant à lutilisateur au début de la création de la boite-->
 					         <input type="hidden" name="id_item" value="'.$colonne['Id_item'].'">	
@@ -144,7 +146,7 @@
 											          Quantité
 											        </label>
 
-						                        <button class="btn btn-outline btn-danger btn-sm btn-block btn-primary " name="ajouter_panier" type="submit">
+						                        <button class="btn btn-outline btn-warning btn-sm btn-block " name="ajouter_panier" type="submit">
 						                        <i class="fa fa-shopping-cart fa-fw"></i>Ajouter au panier</button>
 					                       </div>
 					                    </div>
@@ -156,10 +158,9 @@
 					      </form>
 					      ';}//fin else
 
-				    }//fin while
+					   }//fin while
 
-				    mysqli_close($conn);
-
+					    mysqli_close($conn);
 
 			     ?>
 

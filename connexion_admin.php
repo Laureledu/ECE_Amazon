@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +11,7 @@
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles_formulaire.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
-	<link rel="stylesheet" type="text/css" href="styles_footer.css">
+	<link rel="stylesheet" type="text/css" href="styles_index.css">
 	<!-- fin CSS -->
 
 	<!-- Debut Jquery -->
@@ -47,28 +48,21 @@
 				<!-- Colonne-centree est contenu dans le CSS et permet de mettre tout le contenu au centre de la ligne-->
 				<div class = "col-md-4 colonne-centree">
 					<!-- Default form login -->
-					<form class="text-center border border-light p-5" action="traitement_co_acheteurs.php" method="POST">
+					<form class="text-center border border-light p-5" action="traitement_co_admin.php" method="POST">
 
-					    <p class="h4 mb-4">Connexion</p>
+					    <p class="h4 mb-4">Connexion Admin</p>
 
 					    <!-- Email -->
-					    <input type="text"  name="utilisateur_co" class="form-control mb-4" placeholder="E-mail/Nom d'utilisateur">
+					    <input type="text"  name="admin_co" class="form-control mb-4" placeholder="E-mail/Nom d'utilisateur" required>
 
 					    <!-- Password -->
-					    <input type="password"  name="Mdp" class="form-control mb-4" placeholder="Mot de passe">
+					    <input type="password"  name="Mdp" class="form-control mb-4" placeholder="Mot de passe" required>
 
 
 
 					    <!-- Sign in button -->
 					    <button class="btn btn-info btn-block my-4" type="submit" name="submit" >Connexion</button>
 
-
-					     <hr class="separator">
-
-					    <!-- Register -->
-					    <p>Vous n'êtes pas membre ?
-					        <a href="inscription_acheteurs.php"> Inscrivez-vous</a>
-					    </p>
 					 </form>
 				</div>
 			</div>			        

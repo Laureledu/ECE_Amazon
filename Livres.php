@@ -9,7 +9,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>connexion</title>
+	<title>Livres</title>
 
 	<!-- Debut CSS -->
 	

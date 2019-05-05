@@ -1,0 +1,55 @@
+
+
+.principal
+{ 
+
+	margin-bottom: 10%;
+}
+
+
+
+.separateur
+{ 
+	height : 3px;
+	width: 40%;
+	border: none;
+	box-shadow: none;
+	background-color: #E8392E;
+	margin-bottom: 5%;
+}
+
+#titre_page
+{ 
+	text-align : center;
+	margin-top: 2%;
+}
+
+.image_panier{
+
+	height: 50px;
+
+}
+
+img
+{
+	/*position: absolute;*/
+    padding: 1px;
+
+    height: 100px;
+    width: 100px; 
+    margin: 0 auto;
+    /*border-radius: 0px 0px 0 0 ;*/
+}
+
+li
+{
+
+	list-style: none;
+}
+
+#quantite{
+
+
+	width: 45px;
+
+}
