@@ -14,10 +14,12 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles_index.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="styles_footer.css">
 	<!-- fin CSS -->
 
 	<!-- Debut Jquery -->
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -113,7 +115,9 @@
 
 					<h2> Emy Mahouni </h2>
 
-					<p>Nisi mihi Phaedrum, inquam, tu mentitum aut Zenonem putas, quorum utrumque audivi, cum mihi nihil sane praeter sedulitatem probarent, omnes mihi Epicuri sententiae satis notae sunt. atque eos, quos nominavi, cum Attico nostro frequenter audivi, cum miraretur ille quidem utrumque, Phaedrum autem etiam amaret, cotidieque inter nos ea, quae audiebamus, conferebamus, neque erat umquam controversia, quid ego intellegerem, sed quid probarem.</p>
+					<div class="text-center">
+  						<img src="saitama.jpg" class="img-thumbnail" alt="saitama" style =" width:200px; height:250px">
+					</div>
 
 				</article>
 
@@ -121,7 +125,10 @@
 
 					<h2> Laure Le Du </h2>
 					
-					<p>Nisi mihi Phaedrum, inquam, tu mentitum aut Zenonem putas, quorum utrumque audivi, cum mihi nihil sane praeter sedulitatem probarent, omnes mihi Epicuri sententiae satis notae sunt. atque eos, quos nominavi, cum Attico nostro frequenter audivi, cum miraretur ille quidem utrumque, Phaedrum autem etiam amaret, cotidieque inter nos ea, quae audiebamus, conferebamus, neque erat umquam controversia, quid ego intellegerem, sed quid probarem.</p>
+					<div class="text-center">
+  						<img src="laure.jpg" class="img-thumbnail" alt="laure" style =" width:200px; height:250px">
+					</div>
+
 
 				</article>
 
@@ -129,8 +136,9 @@
 
 					<h2> Baptiste Cauvin </h2>
 					
-					<p>Nisi mihi Phaedrum, inquam, tu mentitum aut Zenonem putas, quorum utrumque audivi, cum mihi nihil sane praeter sedulitatem probarent, omnes mihi Epicuri sententiae satis notae sunt. atque eos, quos nominavi, cum Attico nostro frequenter audivi, cum miraretur ille quidem utrumque, Phaedrum autem etiam amaret, cotidieque inter nos ea, quae audiebamus, conferebamus, neque erat umquam controversia, quid ego intellegerem, sed quid probarem.</p>
-
+					<div class="text-center">
+  						<img src="chat.jpg" class="img-thumbnail" alt="chat_baptiste" style =" width:200px; height:250px">
+					</div>
 				</article>
 
 			</div>

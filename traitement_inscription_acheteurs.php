@@ -24,6 +24,7 @@
 	     		$date_exp_carte = $_POST['date_exp_carte'];
 	     		$code_carte = $_POST['code_carte'];
 	     		$cvv = $_POST['cvv'];
+	     		$nom_carte = $_POST['nom_proprio'];
 	
 
 				//Détection d'erreurs
@@ -56,7 +57,7 @@
 						else{
 
 							//On passe enfin à l'insertion du compte dans la database
-							$sql = "INSERT INTO acheteur (Nom_ach, Prenom_ach, Email_ach, Pseudo_ach Adresse_1, Adresse_2,Ville,CodePostal,Pays,Num_Tel, Type_Carte, Num_Carte, Date_Exp_Carte, Code_Carte, Cvv, Mdp) VALUES ('$nom', '$prenom', '$email', '$pseudo', '$adresse_1','$adresse_2','$ville', '$code_postal','$pays','$tel','$type_carte','$num_carte','$date_exp_carte','$code_carte','$cvv','$mdp')";
+							$sql = "INSERT INTO acheteur (Nom_ach, Prenom_ach, Email_ach, Pseudo_ach, Adresse_1, Adresse_2,Ville,CodePostal,Pays,Num_Tel, Type_Carte,Nom_Carte , Num_Carte, Date_Exp_Carte, Code_Carte, Cvv, Mdp) VALUES ('$nom', '$prenom', '$email', '$pseudo', '$adresse_1','$adresse_2','$ville', '$code_postal','$pays','$tel','$type_carte','$nom_carte','$num_carte','$date_exp_carte','$code_carte','$cvv','$mdp')";
 							$result = mysqli_query($conn, $sql);
 
 							header("Location: index.php?création=compte_ajoute");

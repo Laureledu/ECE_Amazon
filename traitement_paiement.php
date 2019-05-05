@@ -19,7 +19,7 @@
 
 	 		$id=$_SESSION['id_acheteur'];
 
-	 		$sql = "SELECT * FROM acheteur WHERE Id_acheteur = '$id' AND Type_Carte = '$type_carte' AND Num_Carte = '$num_carte' AND Date_Exp_Carte = '$date_exp_carte' AND  Code_Carte = '$code_carte' AND Cvv = '$cvv' AND Nom_carte = '$nom_carte'";
+	 		$sql = "SELECT * FROM acheteur WHERE Id_acheteur = '$id' AND Type_Carte = '$type_carte' AND Num_Carte = '$num_carte' AND Date_Exp_Carte = '$date_exp_carte' AND  Code_Carte = '$code_carte' AND Cvv = '$cvv' AND Nom_Carte = '$nom_carte'";
 
 	 		$result = mysqli_query($conn, $sql);
 			$verification = mysqli_num_rows($result);
